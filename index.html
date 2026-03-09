@@ -120,16 +120,6 @@ class="external-link button is-normal is-rounded is-dark">
 </section>
 
 
-<!-- Teaser Video -->
-
-<section class="hero teaser">
-<div class="container is-max-desktop">
-<div class="hero-body">
-
-<video autoplay controls muted loop width="100%">
-<source src="static/videos/demo.mp4" type="video/mp4">
-</video>
-
 <h2 class="subtitle has-text-centered">
 EEG-guided reinforcement learning enables autonomous driving agents to incorporate human cognitive responses into decision-making, improving safety and collision avoidance.
 </h2>
@@ -167,47 +157,62 @@ We train a neural network to predict ERP strength directly from visual scene inf
 </div>
 </section>
 
+<!-- Method & Contributions Section -->
+<section class="section">
+  <div class="container is-max-desktop">
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+    <h2 class="title is-3">Method and Contributions</h2>
+
+    <div class="content has-text-justified">
+
+      <p>
+      This study leverages the advantages of event-related potentials (ERPs), specifically their reliable millisecond-level representation of natural brain responses. 
+      It extends classical ERP analysis by exploring the potential of using ERP signals to train reinforcement learning (RL) models for autonomous intelligent vehicle (AIV) tasks.
+      </p>
+
+      <p>
+      We collect EEG data from 20 participants while they actively drive in a realistic VR-based driving simulator. By analyzing their ERP responses to sudden environmental 
+      changes, we observe a correlation between ERP amplitude and driver reaction time. Based on this neuro-cognitive insight, we design a human cognitive reward model 
+      that predicts ERP strength directly from scene images. The predicted ERP signal is then incorporated into the reward function of a reinforcement learning agent.
+      </p>
+
+      <p>
+      Unlike traditional RL with EEG feedback, which requires EEG signals during inference, our approach distills human cognitive responses into a vision-based model. 
+      As a result, the trained RL agent can leverage human cognitive feedback without requiring EEG signals during deployment, making the framework more scalable and 
+      practical for real-world autonomous driving systems.
+      </p>
+
+      <h3 class="title is-4">Main Contributions</h3>
+
+      <ul>
+        <li>
+        <b>Neuro-cognitive driving dataset.</b> We present a novel dataset collected using a realistic VR driving simulator, capturing driver behavioral signals, 
+        eye-tracking data, EEG recordings, and corresponding scene images.
+        </li>
+
+        <li>
+        <b>Human cognitive reward model.</b> We develop a neural model that predicts EEG-derived cognitive signals directly from visual scene inputs.
+        </li>
+
+        <li>
+        <b>Neuro-cognitive RL framework.</b> We propose a reinforcement learning framework that integrates reward signals from the cognitive reward model, 
+        demonstrating improved safety and performance in two challenging autonomous driving scenarios.
+        </li>
+      </ul>
+
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
 
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <img src="static/images/framework.png" alt="Framework of the proposed neuro-cognitive reinforcement learning system" loading="lazy"/>
+        <p class="subtitle has-text-centered">
+        Overview of the proposed neuro-cognitive reward modeling framework. EEG signals are used to train a cognitive reward model, which predicts ERP strength from visual scene inputs and provides reward shaping for reinforcement learning.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
 
